@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Virginia's Bluest and Reddest Counties</title>
+<meta name="description" content="The Highlander: the 10 most Democratic and 10 most Republican Virginia localities in the November 2026 U.S. Senate race. Unofficial results.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="splash" id="splash" aria-hidden="true">
+  <img src="img/decision26-logo.png" alt="" width="1200" height="286">
+  <div class="splash-bar"><span></span></div>
+</div>
+
+<main class="wrap" id="app">
+  <h1 class="w-title" id="title">Virginia’s <span class="title-blue">Bluest</span> and <span class="title-red">Reddest</span> Counties</h1>
+
+  <div class="picker" role="group" aria-label="Choose a list">
+    <button type="button" class="pick dem" data-side="dem" aria-pressed="true" aria-label="Show the 10 most Democratic places">
+      <img src="img/warner.png" alt="" width="200" height="200">
+      <span class="pick-t">
+        <span class="pick-n">Mark Warner</span>
+        <span class="pick-s num" id="sD"></span>
+      </span>
+    </button>
+    <button type="button" class="pick rep" data-side="rep" aria-pressed="false" aria-label="Show the 10 most Republican places">
+      <img src="img/mizusawa.png" alt="" width="200" height="200">
+      <span class="pick-t">
+        <span class="pick-n">Bert Mizusawa</span>
+        <span class="pick-s num" id="sR"></span>
+      </span>
+    </button>
+  </div>
+
+  <div class="scope"><div class="scope-in" role="group" aria-label="Which localities">
+    <button type="button" data-scope="counties" aria-pressed="true">Counties</button>
+    <button type="button" data-scope="all" aria-pressed="false">Counties and cities</button>
+  </div></div>
+
+  <div class="map" id="map">
+    <img class="map-logo" src="img/decision26-logo.png" alt="Decision ’26 · The Highlander" width="1200" height="286">
+    <div class="tip" id="tip" hidden></div>
+  </div>
+
+  <div class="list-head" aria-hidden="true"><span>#</span><span id="lhName">County</span><span>Margin</span></div>
+  <ol class="list" id="list" aria-live="polite"></ol>
+
+  <div class="credit">
+    <img src="img/highlander-footer.png" alt="The Highlander">
+    <span>Results: Virginia Department of Elections. Map: U.S. Census Bureau.</span>
+  </div>
+</main>
+
+<script src="data/widget-data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
